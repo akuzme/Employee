@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public abstract class Employee implements Payable {
     // TODO fix class declaration and declare variables here
     public String employeeId;
@@ -31,14 +33,13 @@ public abstract class Employee implements Payable {
 
     public double getAverageMonthlySalary() {
         // TODO fill in code here and replace the return statement
-
-        return 0;
+        return calculatePay();
     }
 
     @Override
     public String toString() {
         // TODO fill in code here and replace the return statement, be sure to format double value
-        return "";
+        return String.format(Locale.ENGLISH, "%s, %s, %.2f", getEmployeeId(), getName(), getAverageMonthlySalary());
     }
 
     public abstract double calculatePay();
