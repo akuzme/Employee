@@ -48,7 +48,7 @@ public class EmployeeTest {
     employee1.calculatePay();
 
     assertEquals(employee1.getAverageMonthlySalary(), 37.995d,
-        "The average monthly salary is wrong for " + employee1);
+            "The average monthly salary is wrong for " + employee1);
 
     assertTrue(employee1.toString().contains("Volodymyr"),
         "toString method does not contains employee's name: " + employee1);

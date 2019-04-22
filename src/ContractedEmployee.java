@@ -1,11 +1,13 @@
 class ContractedEmployee extends Employee{
-  String conrtactedEmployeName;//should be removed
   String federalTaxId;
   double hourlyRate;
   double numberOfHoursWorked;
   // TODO fix class declaration and declare variables here
 
+
   public ContractedEmployee(String employeeId, String name, String federalTaxId) {
+    super(employeeId, name);
+    this.federalTaxId = federalTaxId;
     // TODO fill in code here
   }
 
@@ -39,8 +41,13 @@ class ContractedEmployee extends Employee{
     // TODO fill in code here
   }
 
-  public String getName() {
-    return conrtactedEmployeName; //should be removed
+  public double getAverageMonthlySalary() {
+    return calculatePay();
+  }
+
+  @Override
+  public double calculatePay() {
+     return numberOfHoursWorked * hourlyRate;
   }
 
   // TODO fill in code here - hourly paid workers should be described

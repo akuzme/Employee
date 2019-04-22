@@ -1,11 +1,12 @@
 class SalariedEmployee extends Employee{
   // TODO fix class declaration and declare variables here
-  String salariedEmployeeName;//should be removed
   double fixedMonthlyPayment;
   String socialSecurityNumber;
 
 
   public SalariedEmployee(String employeeId, String name, String socialSecurityNumber) {
+    super(employeeId, name);
+    this.socialSecurityNumber = socialSecurityNumber;
     // TODO fill in code here
   }
 
@@ -29,8 +30,9 @@ class SalariedEmployee extends Employee{
     // TODO fill in code here - done
   }
 
-  public String getName() {
-    return salariedEmployeeName;//should be removed
+  @Override
+  public double calculatePay() {
+    return fixedMonthlyPayment;
   }
 
 

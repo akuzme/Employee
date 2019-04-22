@@ -1,7 +1,7 @@
-public class Employee implements Payable {
+public abstract class Employee implements Payable {
     // TODO fix class declaration and declare variables here
-    String employeeId;
-    String name;
+    public String employeeId;
+    public String name;
 
     public Employee(String employeeId, String name) {
         this.employeeId = employeeId;
@@ -31,6 +31,7 @@ public class Employee implements Payable {
 
     public double getAverageMonthlySalary() {
         // TODO fill in code here and replace the return statement
+
         return 0;
     }
 
@@ -40,7 +41,6 @@ public class Employee implements Payable {
         return "";
     }
 
-    public void calculatePay() { //manually created
-    }
+    public abstract double calculatePay();
 
 }
